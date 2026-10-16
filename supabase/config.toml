@@ -1,0 +1,18 @@
+project_id = "springvilla-admissions-portal"
+
+[db]
+major_version = 15
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[auth]
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://127.0.0.1:5173"]
+
+[functions.send-notification]
+verify_jwt = true
+
+[functions.create-admin]
+verify_jwt = true
